@@ -1,4 +1,7 @@
+$redSecondary: #91141b;
+$redMain: #b31718;
+
 html {
-  background-color: #b31718;
+  background-image: linear-gradient($redMain,$redSecondary);
 }
 

@@ -1,40 +1,58 @@
-#container {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid yellow;
-    border-radius: 350px;
-    width: 700px;
-    height: 700px;
-    margin: 20px;
-    
-    }
-#elem{
-    position: absolute;
-    
-    width: 2302px;
-    height: 1295px;
-}
+$redMain: #b31718;
+$yellowMain: #fdd305;
 
-.dragged{
-    border: 2px solid red;
-    
-    
+#container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 6px solid $yellowMain;
+  border-radius: 350px;
+  min-width: 700px;
+  width: 700px;
+  height: 700px;
+  margin: 20px;
+}
+#elem {
+  background-image: url("./MuralMap-assets/MuralMap05.png");
+  background-size: contain;
+
+  position: absolute;
+  width: 2500px;
+  height: 1500px;
+}
+.mural-button {
+  background-image: url("./MuralMap-assets/logoRed.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 900px;
+  top: 400px;
+  height: 50px;
+  width: 60px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-image: url("./MuralMap-assets/rubinstein300x300.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 750px;
+    top: 250px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid $yellowMain;
+    border-radius: 150px;
+  }
 }
 
 #bigger-container {
-    display: flex;
-    justify-content: center;
-    background-color: #b31718;
-    
-    font-size: 100px;
-    font-family: 'Lobster', cursive;
-   
-}
-.map-img{
-    position: absolute;
-    width: 2302px;
-    height: 1295px;
-    
+  display: flex;
+  justify-content: center;
+  background-color: $redMain;
+
+  font-size: 100px;
+  font-family: "Lobster", cursive;
 }

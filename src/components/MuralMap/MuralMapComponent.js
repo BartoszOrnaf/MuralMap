@@ -1,6 +1,5 @@
 import React from 'react'
 import './MuralMapComponent.scss'
-import muralMap from './drag-assets/MuralMap01.png'
 
 
 class MuralMapComponent extends React.Component {
@@ -16,8 +15,9 @@ class MuralMapComponent extends React.Component {
         function dragStart(e) {
             MuralMapComponent.startX = e.clientX;
             MuralMapComponent.startY = e.clientY;
+            console.log('startX'+ e.clientX)
         }
-
+        
         function dragEnd(e) {
             let diffX = e.clientX - MuralMapComponent.startX
             let parsedLeft = parseInt(element.style.left);
@@ -26,6 +26,7 @@ class MuralMapComponent extends React.Component {
             let diffY = e.clientY - MuralMapComponent.startY
             let parsedTop = parseInt(element.style.top);
             if (parsedTop+ diffY < 0 && parsedTop + diffY > -800) { element.style.top = parsedTop + diffY + 'px'; }
+            console.log('endX' + e.clientX)
             
         }
     }
@@ -34,8 +35,8 @@ class MuralMapComponent extends React.Component {
     render() {
         return <div id="bigger-container" >
             <div id="container">
-                <div id="elem" draggable="true" style={{ left: '-650px', top: '-595px' }}>
-                    <img src={muralMap} className="map-img" alt="mural map" ></img>
+                <div id="elem" draggable="true" style={{ left: '-750px', top: '-250px' }}>
+                <button className="mural-button" alt="mural01" ></button> 
                 </div>
             </div>
         </div>
