@@ -1,5 +1,4 @@
-$redMain: #b31718;
-$yellowMain: #fdd305;
+@import '../../variables.scss';
 
 #container {
   display: flex;
@@ -13,46 +12,19 @@ $yellowMain: #fdd305;
   height: 700px;
   margin: 20px;
 }
-#elem {
-  background-image: url("./MuralMap-assets/MuralMap05.png");
-  background-size: contain;
 
-  position: absolute;
-  width: 2500px;
-  height: 1500px;
-}
-.mural-button {
-  background-image: url("./MuralMap-assets/logoRed.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 900px;
-  top: 400px;
-  height: 50px;
-  width: 60px;
-  background-color: transparent;
-  outline: none;
-  border: none;
-
-  &:hover {
-    background-image: url("./MuralMap-assets/rubinstein300x300.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 750px;
-    top: 250px;
-    height: 300px;
-    width: 300px;
-    border: 5px solid $yellowMain;
-    border-radius: 150px;
-  }
-}
 
 #bigger-container {
   display: flex;
   justify-content: center;
   background-color: $redMain;
-
   font-size: 100px;
   font-family: "Lobster", cursive;
+}
+#elem {
+  background-image: url("./MuralMap-assets/MuralMap06.png");
+  background-size: contain;
+  position: absolute;
+  width: 2500px;
+  height: 1500px;
 }
