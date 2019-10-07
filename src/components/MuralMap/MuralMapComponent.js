@@ -2,20 +2,29 @@ import React from 'react'
 import './MuralMapComponent.scss'
 import MuralItemsComponent from '../MuralItems/MuralItemsComponent'
 
-
 class MuralMapComponent extends React.Component {
 
     componentDidMount() {
 
+        const element = document.getElementById('elem')
+        const dragImg = new Image();
+        dragImg.src = "/img/handSmall.png";
+
         this.startX = 0;
         this.startY = 0;
-        const element = document.getElementById('elem')
+
+        element.addEventListener('dragover', dragOver);
         element.addEventListener('dragstart', dragStart);
         element.addEventListener('dragend', dragEnd);
+
+        function dragOver(e) {
+            e.preventDefault(); //shows different cursor inside "element" and outside of it.
+        }
 
         function dragStart(e) {
             MuralMapComponent.startX = e.clientX;
             MuralMapComponent.startY = e.clientY;
+            e.dataTransfer.setDragImage(dragImg, 35, 75);
         }
 
         function dragEnd(e) {
@@ -34,7 +43,7 @@ class MuralMapComponent extends React.Component {
     render() {
         return <div id="bigger-container" >
             <div id="container">
-                <div id="elem" draggable="true" style={{ left: '-750px', top: '-250px' }}>
+                <div id="elem" draggable="true" style={{ left: '-680px', top: '-300px' }}>
                     < MuralItemsComponent />
                 </div>
             </div>
