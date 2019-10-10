@@ -1,13 +1,12 @@
-$redSecondary: #91141b;
-$redMain: #b31718;
-$yellowMain: #fdd305;
+@import "../../variables.scss";
+
 #navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     color: $yellowMain;
     background-image: linear-gradient($redSecondary,$redMain);
-    font-size: 60px;
+    font-size: $fontLarge;
     font-family: 'Lobster', cursive;
     padding: 10px;
     

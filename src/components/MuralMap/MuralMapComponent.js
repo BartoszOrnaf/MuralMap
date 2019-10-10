@@ -17,14 +17,14 @@ class MuralMapComponent extends React.Component {
         element.addEventListener('dragstart', dragStart);
         element.addEventListener('dragend', dragEnd);
 
-        function dragOver(e) {
-            e.preventDefault(); //shows different cursor inside "element" and outside of it.
-        }
-
         function dragStart(e) {
             MuralMapComponent.startX = e.clientX;
             MuralMapComponent.startY = e.clientY;
             e.dataTransfer.setDragImage(dragImg, 35, 75);
+        }
+
+        function dragOver(e) {
+            e.preventDefault(); //shows different cursor inside "element" and outside of it.
         }
 
         function dragEnd(e) {
@@ -39,15 +39,62 @@ class MuralMapComponent extends React.Component {
         }
     }
 
-
     render() {
-        return <div id="bigger-container" >
-            <div id="container">
-                <div id="elem" draggable="true" style={{ left: '-680px', top: '-300px' }}>
-                    < MuralItemsComponent />
+        return (
+            <React.Fragment>
+                <div id="bigger-container" >
+                    <div id="container">
+                        <div id="elem" draggable="true" style={{ left: '-680px', top: '-300px' }}>
+                            < MuralItemsComponent />
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+                <div id="muralPopupWindow" >
+                    <div id="muralPopupFrame">
+                        <button className="popup-closing-button">
+                            X
+                        {/* Closing button */}
+                        </button>
+                        <div className="popup-img">
+                        {/* append background img here */}
+                        </div>
+                        <div className="popup-title">
+                            Gentryfikacja
+                            {/* append mural name here */}
+                        </div>
+                        <div className="popup-tag">
+                            Autor:
+                        </div>
+                        <div className="popup-tag-content">
+                            M-City
+                            {/* append artist name here */}
+                        </div>
+                        <div className="popup-tag">
+                            Adres:
+                        </div>
+                        <div className="popup-tag-content">
+                        28 Pułku Strzelców Kaniowskich 48
+                            {/* append mural adress here */}
+                        </div>
+                        <div className="popup-tag">
+                            Data:
+                        </div>
+                        <div className="popup-tag-content">
+                            2012
+                            {/* append mural adress here */}
+                        </div>
+                        <div className="popup-text">
+                            {/* append mural description here */}
+                            Mariusz Waras aka M-City - ur. 1978 w Gdyni. Grafik, malarz zewnętrzny, podróżnik, architekt amator. Absolwent Wydziału Grafiki Akademii Sztuk Pięknych w Gdańsku, gdzie obecnie jest asystentem prof. zw. Jerzego Ostrogórskiego w pracowni malarstwa. Autor kilkuset murali w ramach autorskiego projektu m-city. Pracuje przy wykorzystaniu techniki szablonu. Do malowania wykorzystuje specjalne matryce wycięte zazwyczaj w tekturze lub grubej folii, które przykłada do malowanej powierzchni, a następnie pokrywa farbą.
+                        </div>
+                        <div className="popup-source">
+                            Zobacz źródło
+                        {/* append background img here */}
+                        </div>
+                    </div>
+                </div>
+            </React.Fragment>
+        )
     }
 
 };

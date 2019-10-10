@@ -33,12 +33,26 @@ class MuralItemsComponent extends React.Component {
             top: ${murals[this.id].top};
             `)
         }
+
+        // function muralPopup() {
+        //     let x = document.getElementById("myDIV");
+        //     if (x.style.display === "none") {
+        //         x.style.display = "block";
+        //     } else {
+        //         x.style.display = "none";
+        //     }
+        // }
     }
 
     render() {
-        return <div id="all-murals">
-            {/* append Murals buttons here */}
-        </div>
+        return (
+            <React.Fragment>
+                <div id="all-murals">
+                    {/* append Murals buttons here */}
+                </div>
+               
+            </React.Fragment>
+        )
     }
 
 }
