@@ -1,0 +1,145 @@
+@import "../../variables.scss";
+
+#muralPopupWindow {
+  // to make popup visible: display: flex, to hide display: none
+  display: none;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#muralPopupFrame {
+  background-image: linear-gradient($redMain, $redSecondary);
+  position: absolute;
+  height: 700px;
+  width: 700px;
+  top: 115px;
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.45);
+  border: 6px solid $yellowMain;
+  border-radius: 350px;
+}
+#popup-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -80px;
+  top: -50px;
+  width: 300px;
+  height: 300px;
+  border: 5px solid $yellowMain;
+  border-radius: 150px;
+  // background-image: url(/img/.jpg); is appended in MuralPopupComponent.js by setAttribute.
+}
+
+.popup-closing-button {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: $redMain;
+  color: $yellowMain;
+  position: absolute;
+  left: 660px;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid $yellowMain;
+  border-radius: 25px;
+  &:hover {
+    background-color: $redSecondary;
+    border: 5px solid $yellowSecondary;
+    color: $yellowSecondary;
+    cursor: pointer;
+  }
+}
+
+.popup-previous-button {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: $redMain;
+  color: $yellowMain;
+  position: absolute;
+  left: 220px;
+  top: 670px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid $yellowMain;
+  border-radius: 25px;
+  &:hover {
+    background-color: $redSecondary;
+    border: 5px solid $yellowSecondary;
+    color: $yellowSecondary;
+    cursor: pointer;
+  }
+}
+
+.popup-next-button {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: $redMain;
+  color: $yellowMain;
+  position: absolute;
+  left: 405px;
+  top: 670px;
+  width: 50px;
+  height: 50px;
+  border: 5px solid $yellowMain;
+  border-radius: 25px;
+  &:hover {
+    background-color: $redSecondary;
+    border: 5px solid $yellowSecondary;
+    color: $yellowSecondary;
+    cursor: pointer;
+  }
+}
+
+#popup-title {
+  font-family: "Lobster", cursive;
+  font-size: $fontBig;
+  text-align: center;
+  color: $yellowMain;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.popup-tag {
+  font-family: "Lobster", cursive;
+  font-size: $fontSmall;
+  text-align: center;
+  color: $yellowMain;
+  margin-top: 10px;
+}
+.popup-tag-content {
+  font-family: "Lobster", cursive;
+  font-size: $fontMedium;
+  text-align: center;
+  color: $yellowMain;
+  margin-top: 0px;
+}
+#popup-history {
+  position: absolute;
+  font-family: "Lobster", cursive;
+  font-size: $fontMedium;
+  text-align: justify;
+  color: $yellowMain;
+  margin: 0px 85px 0px 90px;
+  top: 330px;
+}
+
+#popup-source a {
+  position: absolute;
+  font-family: "Lobster", cursive;
+  font-size: $fontSmall;
+  color: $yellowMain;
+  top: 650px;
+  left: 306px;
+  text-decoration: none;
+  &:hover {
+    color: $yellowSecondary;
+    cursor: pointer;
+  }
+}

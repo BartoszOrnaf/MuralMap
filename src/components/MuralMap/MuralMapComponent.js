@@ -1,9 +1,13 @@
 import React from 'react'
 import './MuralMapComponent.scss'
 import MuralItemsComponent from '../MuralItems/MuralItemsComponent'
+import MuralPopupComponent from '../MuralPopup/MuralPopupComponent';
+import { GeneralContext } from '../ContextGeneral/ContextGeneralComponent';
+
 
 class MuralMapComponent extends React.Component {
 
+    static contextType = GeneralContext;
     componentDidMount() {
 
         const element = document.getElementById('elem')
@@ -49,50 +53,7 @@ class MuralMapComponent extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div id="muralPopupWindow" >
-                    <div id="muralPopupFrame">
-                        <button className="popup-closing-button">
-                            X
-                        {/* Closing button */}
-                        </button>
-                        <div className="popup-img">
-                        {/* append background img here */}
-                        </div>
-                        <div className="popup-title">
-                            Gentryfikacja
-                            {/* append mural name here */}
-                        </div>
-                        <div className="popup-tag">
-                            Autor:
-                        </div>
-                        <div className="popup-tag-content">
-                            M-City
-                            {/* append artist name here */}
-                        </div>
-                        <div className="popup-tag">
-                            Adres:
-                        </div>
-                        <div className="popup-tag-content">
-                        28 Pułku Strzelców Kaniowskich 48
-                            {/* append mural adress here */}
-                        </div>
-                        <div className="popup-tag">
-                            Data:
-                        </div>
-                        <div className="popup-tag-content">
-                            2012
-                            {/* append mural adress here */}
-                        </div>
-                        <div className="popup-text">
-                            {/* append mural description here */}
-                            Mariusz Waras aka M-City - ur. 1978 w Gdyni. Grafik, malarz zewnętrzny, podróżnik, architekt amator. Absolwent Wydziału Grafiki Akademii Sztuk Pięknych w Gdańsku, gdzie obecnie jest asystentem prof. zw. Jerzego Ostrogórskiego w pracowni malarstwa. Autor kilkuset murali w ramach autorskiego projektu m-city. Pracuje przy wykorzystaniu techniki szablonu. Do malowania wykorzystuje specjalne matryce wycięte zazwyczaj w tekturze lub grubej folii, które przykłada do malowanej powierzchni, a następnie pokrywa farbą.
-                        </div>
-                        <div className="popup-source">
-                            Zobacz źródło
-                        {/* append background img here */}
-                        </div>
-                    </div>
-                </div>
+                <MuralPopupComponent />
             </React.Fragment>
         )
     }

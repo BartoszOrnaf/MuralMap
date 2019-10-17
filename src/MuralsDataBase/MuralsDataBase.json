@@ -34,7 +34,7 @@
     },
     {
         "name": "Enjoy the silence",
-        "artist":"ETAM crew (Mateusz Gapski i Przemek Blejzyk) i Robert Proch",
+        "artist":"ETAM crew i Robert Proch",
         "history":"'Enjoy the silence' to nowy łódzki mural duetu Etam Cru i poznańskiego artysty Roberta Procha. Ogromne malowidło powstało w ramach projektu UNIQA Art Łódź. Mural można podziwiać na ścianie kamienicy przy parkingu OFF Piotrkowska (wejście od ul. Sienkiewicza).",
         "address": "OFF Piotrkowska",
         "date": "2016",
@@ -43,20 +43,10 @@
         "imgUrl":"/img/EnjoyTheSilence.jpg",
         "aboutUrl":"http://lodz.wyborcza.pl/lodz/5,35136,20643331.html"
     },
-    {
-        "name": "Enjoy the silence",
-        "artist":"ETAM crew (Mateusz Gapski i Przemek Blejzyk) i Robert Proch",
-        "history":"'Enjoy the silence' to nowy łódzki mural duetu Etam Cru i poznańskiego artysty Roberta Procha. Ogromne malowidło powstało w ramach projektu UNIQA Art Łódź. Mural można podziwiać na ścianie kamienicy przy parkingu OFF Piotrkowska (wejście od ul. Sienkiewicza).",
-        "address": "OFF Piotrkowska",
-        "date": "2016",
-        "left": "1250px",
-        "top": "980px",
-        "imgUrl":"/img/EnjoyTheSilence.jpg",
-        "aboutUrl":"http://lodz.wyborcza.pl/lodz/5,35136,20643331.html"
-    },
+  
     {
         "name": "Madame Chicken",
-        "artist":"ETAM crew (Mateusz Gapski i Przemek Blejzyk)",
+        "artist":"ETAM crew ",
         "history":"Pomimo tego że murale mają charakter mocno surrealistyczny, czasami sarkastyczny, to często nawiązują do „wschodnich symboli”, jak „Madamme Chicken” namalowana w 2013 w Łodzi. Folklor w nowoczesnym wydaniu odpowiada odbiorcom, w dodatku każdy element dzieła dopracowany jest w najmniejszym detalu. Artyści doszli do perfekcji w wykorzystywaniu spray’ów, farb akrylowych oraz olejnych.",
         "address": "al. Politechniki 16",
         "date": "2013",
@@ -78,7 +68,7 @@
     },
     {
         "name": "Traphouse",
-        "artist":"ETAM crew (Mateusz Gapski i Przemek Blejzyk)",
+        "artist":"ETAM crew ",
         "history":"Dzieło przedstawia drewnianą ruderę, której okna zabite są deskami. Mural ten stworzyło dwóch absolwentów łódzkiej ASP, znanych jako Etam Crew. Artyści nie chcieli podać swoich nazwisk ponieważ nie zależy im na promocji siebie tylko swojej sztuki. Dzieło powstało w trzy dni. Do jego stworzenia wykorzystano ok. 200 puszek farby w sprayu.",
         "address": "Nawrot 71",
         "date": "2012",
@@ -88,8 +78,8 @@
         "aboutUrl":"https://lodz.naszemiasto.pl/nowy-mural-w-lodzi-w-czwartek-prezentacja-dziela-na/ar/c13-1488819"
     },
     {
-        "name": "Mural braci Os Gemeos oraz Aryz",
-        "artist":"Bracia Os Gemeos oraz Aryz",
+        "name": "No name",
+        "artist":"Os Gemeos i Aryz",
         "history":"Twórcami tego wielkoformatowego malowidła są bliźniacy z Brazylii Os Gemeos oraz Hiszpan Aryz. Mural powstał przy współpracy z Fundacją Urban Forms i otworzył drugą edycję Galerii Urban Forms.",
         "address": "Roosevelta 5",
         "date": "2012",
@@ -99,7 +89,7 @@
         "aboutUrl":"https://lodz.naszemiasto.pl/streetartowcy-maluja-lodz-mural-przy-roosevelta-odsloniety/ar/c13-2795902"
     },
     {
-        "name": "Łasice kradną jajka",
+        "name": "Łasice kradną...",
         "artist":"ROA",
         "history":"Łódzki mural „Łasice kradną jajka”, który otworzył trzecią edycję Festiwalu Galeria Urban Forms, jest doskonałym przykładem charakterystycznego dla artysty starannego wpasowywania obrazu w otaczającą go przestrzeń i wykorzystywania istniejących rozwiązań architektonicznych.",
         "address": "Nowomiejska 5",
@@ -121,9 +111,9 @@
         "aboutUrl":"https://www.gregorgonsior.com/index.php/murals/zachodnia-52/"
     },
     {
-        "name": "M-City no name",
+        "name": "No name",
         "artist":"M-City",
-        "history":"Mariusz Waras aka M-City - ur. 1978 w Gdyni. Grafik, malarz zewnętrzny, podróżnik, architekt amator. Absolwent Wydziału Grafiki Akademii Sztuk Pięknych w Gdańsku, gdzie obecnie jest asystentem prof. zw. Jerzego Ostrogórskiego w pracowni malarstwa. Autor kilkuset murali w ramach autorskiego projektu m-city. Pracuje przy wykorzystaniu techniki szablonu. Do malowania wykorzystuje specjalne matryce wycięte zazwyczaj w tekturze lub grubej folii, które przykłada do malowanej powierzchni, a następnie pokrywa farbą. Techniką tą można wykonać zarówno proste, jednokolorowe prace, jak i prace bardziej skomplikowane, wymagające wykonania wielu matryc i dokładnego zaplanowania kolejności nakładania farb. Głównym motywem w jego twórczości jest pejzaż miejski oraz fascynacja architekturą przemysłową.",
+        "history":"Mariusz Waras aka M-City - ur. 1978 w Gdyni. Grafik, malarz zewnętrzny, podróżnik, architekt amator. Absolwent ASP w Gdańsku. Autor kilkuset murali w ramach autorskiego projektu m-city. Pracuje przy wykorzystaniu techniki szablonu. Do malowania wykorzystuje specjalne matryce wycięte zazwyczaj w tekturze lub grubej folii, które przykłada do malowanej powierzchni, a następnie pokrywa farbą. Techniką tą można wykonać zarówno proste, jednokolorowe prace, jak i prace bardziej skomplikowane, wymagające wykonania wielu matryc i dokładnego zaplanowania kolejności nakładania farb. Głównym motywem w jego twórczości jest pejzaż miejski oraz fascynacja architekturą przemysłową.",
         "address": "Legionów 17",
         "date": "2011",
         "left": "950px",
@@ -133,7 +123,7 @@
     },
     {
         "name": "Gentryfikacja",
-        "artist":"TONE (Robert Proch)",
+        "artist":"TONE",
         "history":"W ramach projektu Galeria Urban Forms w Łodzi, powstają kolejne znakomite murale, które zdobią ściany tamtejszych budynków. Tam razem swoje dzieło skończył Robert Proch, znany jako TONE, a jego pracę możecie zobaczyć przy ulicy Legionów 27.",
         "address": "Legionów 27",
         "date": "2013",
@@ -143,7 +133,7 @@
         "aboutUrl":"https://www.urbanforms.org/fundacja/artysci/tone/"
     },
     {
-        "name": "Blejzyk no-name",
+        "name": "No-name",
         "artist":"Przemysław Blejzyk",
         "history":"Oficjalnie zaprezentowano nowy mural w Łodzi. Znajduje się on na ścianie kamienicy przy ul. Uniwersyteckiej 12. Jest częścią pracy magisterskiej Przemysława Blejzyka, studenta łódzkiej ASP. Obraz na ścianie kamienicy przy ul. Uniwersyteckiej to już 14 mural w Łodzi, który powstał dzięki pomocy fundacji Urban Forms. Inne dzieła, polskich i zagranicznych artystów, można zobaczyć m.in. przy ul. Uniwersyteckiej 3, Jaracza 59, Pomorskiej 28 oraz na kilku budynkach przy ul. Zachodniej i al. Kościuszki.",
         "address": "Uniwersytecka 12",
@@ -163,16 +153,5 @@
         "top": "900px",
         "imgUrl":"/img/HolyWarrior.jpg",
         "aboutUrl":"https://www.urbanforms.org/fundacja/artysci/inti/"
-    },
-    {
-        "name": "",
-        "artist":"",
-        "history":"",
-        "address": "",
-        "date": "",
-        "left": "px",
-        "top": "px",
-        "imgUrl":"/img/.jpg",
-        "aboutUrl":""
     }
 ]

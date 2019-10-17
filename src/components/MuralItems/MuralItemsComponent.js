@@ -1,7 +1,17 @@
 import React from 'react';
 import './MuralItemsComponent.scss';
 import MuralsData from '../../MuralsDataBase/MuralsDataBase.json';
+import { GeneralContext } from '../ContextGeneral/ContextGeneralComponent';
+
 class MuralItemsComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.showPopup = this.showPopup.bind(this);
+    }
+
+    static contextType = GeneralContext;
+
 
     componentDidMount() {
         const murals = MuralsData;
@@ -17,6 +27,8 @@ class MuralItemsComponent extends React.Component {
 
             muralsVariables[i].addEventListener("mouseover", overStyle);
             muralsVariables[i].addEventListener('mouseout', outStyle);
+            muralsVariables[i].addEventListener('click', this.showPopup);
+
         }
 
         function overStyle() {
@@ -34,14 +46,14 @@ class MuralItemsComponent extends React.Component {
             `)
         }
 
-        // function muralPopup() {
-        //     let x = document.getElementById("myDIV");
-        //     if (x.style.display === "none") {
-        //         x.style.display = "block";
-        //     } else {
-        //         x.style.display = "none";
-        //     }
-        // }
+    }
+
+    showPopup(e) {
+        this.context.setId(e.srcElement.id)
+        const popupWindow = document.getElementById('muralPopupWindow');
+        popupWindow.setAttribute("style", `
+        display: flex;
+        `);
     }
 
     render() {
@@ -50,11 +62,10 @@ class MuralItemsComponent extends React.Component {
                 <div id="all-murals">
                     {/* append Murals buttons here */}
                 </div>
-               
+
             </React.Fragment>
         )
     }
-
 }
 
 export default MuralItemsComponent;
