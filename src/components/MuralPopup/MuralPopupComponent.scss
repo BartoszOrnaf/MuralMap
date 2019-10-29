@@ -22,7 +22,7 @@
   border: 6px solid $yellowMain;
   border-radius: 350px;
 }
-#popup-img {
+.popup-img {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -32,7 +32,6 @@
   height: 300px;
   border: 5px solid $yellowMain;
   border-radius: 150px;
-  // background-image: url(/img/.jpg); is appended in MuralPopupComponent.js by setAttribute.
 }
 
 .popup-closing-button {
@@ -98,7 +97,7 @@
   }
 }
 
-#popup-title {
+.popup-name {
   font-family: "Lobster", cursive;
   font-size: $fontBig;
   text-align: center;
@@ -120,7 +119,7 @@
   color: $yellowMain;
   margin-top: 0px;
 }
-#popup-history {
+.popup-history {
   position: absolute;
   font-family: "Lobster", cursive;
   font-size: $fontMedium;
@@ -130,7 +129,7 @@
   top: 330px;
 }
 
-#popup-source a {
+.popup-source a {
   position: absolute;
   font-family: "Lobster", cursive;
   font-size: $fontSmall;

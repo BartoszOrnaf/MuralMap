@@ -6,44 +6,13 @@ import { GeneralContext } from '../ContextGeneral/ContextGeneralComponent';
 class MuralPopupComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            muralId: 0,            
-        }
+       
         this.showNext = this.showNext.bind(this);
         this.showPrevious = this.showPrevious.bind(this);
     }
+
     static contextType = GeneralContext;
     
-    renderPopup() {
-        const currentId = this.context.state.id
-        const murals = MuralsData;
-        let popupImg = document.getElementById("popup-img");
-        let muralTitle = document.getElementById("popup-title");
-        let muralAddress = document.getElementById("popup-address");
-        let muralArtist = document.getElementById("popup-artist");
-        let muralDate = document.getElementById("popup-date");
-        let muralHistory = document.getElementById("popup-history");
-        let muralSource = document.getElementById("popup-source");
-        
-        popupImg.setAttribute("style", `
-        background-image: url("${murals[currentId].imgUrl}");
-        `);
-        muralTitle.innerHTML = `${murals[currentId].name}`;
-        muralAddress.innerHTML = `${murals[currentId].address}`;
-        muralArtist.innerHTML = `${murals[currentId].artist}`;
-        muralDate.innerHTML = `${murals[currentId].date}`;
-        muralHistory.innerHTML = `${murals[currentId].history}`;
-        muralSource.innerHTML = `<a href="${murals[currentId].aboutUrl}" target="_blank">Zobacz źródło</a>`;
-    }
-    
-    componentDidMount() {
-        this.renderPopup()
-    }
-    
-    componentDidUpdate() {
-        this.renderPopup()
-    }
-
     hidePopup() {
         const popupWindow = document.getElementById('muralPopupWindow');
         popupWindow.setAttribute("style", `
@@ -58,59 +27,61 @@ class MuralPopupComponent extends React.Component {
             // have to parseInt because sometimes this.context.state.id value is interpreted as string, not a number and gives err
         }
     }
-    
+
     showPrevious() {
         if (this.context.state.id > 0) {
             this.context.setId(parseInt(this.context.state.id) - 1)
         }
     }
-  
-  
+
     render() {
+        const popupImgStyle = {
+            backgroundImage: `url("${MuralsData[this.context.state.id].imgUrl}")`
+        }
+
         return (
             <div id="muralPopupWindow" >
                 <div id="muralPopupFrame">
                     <button className="popup-closing-button" onClick={this.hidePopup}>
                         X
-                        {/* Closing button */}
                     </button>
-                    <div id="popup-img">
-                        {/* append background img here */}
+                    <div className="popup-img" style={popupImgStyle} />
+                    
+                    <div className="popup-name">
+                        {MuralsData[this.context.state.id].name} 
                     </div>
-                    <div id="popup-title">
-                        {/* append mural name here */}
-                    </div>
+                     
                     <div className="popup-tag">
                         Autor:
                             </div>
-                    <div id="popup-artist" className="popup-tag-content">
-                        {/* append artist name here */}
+                    <div className="popup-tag-content">
+                        {MuralsData[this.context.state.id].artist} 
                     </div>
                     <div className="popup-tag">
                         Adres:
                             </div>
                     <div id="popup-address" className="popup-tag-content">
-                        {/* append mural address here */}
+                        {MuralsData[this.context.state.id].address}
                     </div>
                     <div className="popup-tag">
                         Data:
                             </div>
-                    <div id="popup-date" className="popup-tag-content">
-                        {/* append date here */}
+                    <div className="popup-tag-content">
+                        {MuralsData[this.context.state.id].date}
                     </div>
-                    <div id="popup-history">
-                        {/* append mural description here */}
+                    <div className="popup-history">
+                        {MuralsData[this.context.state.id].history}
                     </div>
-                    <div id="popup-source">
-                        {/* append source url here */}
+                    <div className="popup-source">
+                        <a href={MuralsData[this.context.state.id].aboutUrl} target="_blank" rel="noopener noreferrer">Zobacz źródło</a>
                     </div>
                     <button className="popup-previous-button" onClick={this.showPrevious}>
                         &#60;
-                        {/* previous button */}
+                        {/* previous button, arrow from unicode*/}
                     </button>
                     <button className="popup-next-button" onClick={this.showNext}>
                         &#62;
-                        {/* next button */}
+                        {/* next button, arrow from unicode */}
                     </button>
                 </div>
             </div>
