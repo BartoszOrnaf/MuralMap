@@ -2,12 +2,16 @@ import React from 'react'
 import './MuralMapComponent.scss'
 import MuralItemsComponent from '../MuralItems/MuralItemsComponent'
 import MuralPopupComponent from '../MuralPopup/MuralPopupComponent';
-import { GeneralContext } from '../ContextGeneral/ContextGeneralComponent';
+import MuralsData from '../../MuralsDataBase/MuralsDataBase.json';
 
 
 class MuralMapComponent extends React.Component {
 
-    static contextType = GeneralContext;
+    state = {
+        popupVisibility: "none",
+        currentMuralId: 0,
+    }
+
     componentDidMount() {
 
         const element = document.getElementById('elem')
@@ -43,17 +47,61 @@ class MuralMapComponent extends React.Component {
         }
     }
 
+    setCurrentMuralId(id) {
+        this.setState({
+            currentMuralId: id
+        })
+    }
+    showNext() {
+        if (this.state.currentMuralId < Object.keys(MuralsData).length - 1) {
+            this.setState({
+                currentMuralId: this.state.currentMuralId + 1
+            })
+        }
+    }
+
+    showPrevious() {
+        if (this.state.currentMuralId > 0) {
+            this.setState({
+                currentMuralId: this.state.currentMuralId - 1
+            })
+        }
+    }
+
+    toggleVisibility() {
+               
+        if (this.state.popupVisibility === "none") {
+            this.setState({
+                popupVisibility: "flex"
+            })
+        } else {
+            this.setState({
+                popupVisibility: "none"
+            })
+        }
+    }
+
     render() {
+
         return (
             <React.Fragment>
                 <div id="bigger-container" >
                     <div id="container">
                         <div id="elem" draggable="true" style={{ left: '-680px', top: '-300px' }}>
-                            < MuralItemsComponent />
+                            < MuralItemsComponent 
+                            setCurrentMuralId={this.setCurrentMuralId = this.setCurrentMuralId.bind(this)} 
+                            toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
+                            />
                         </div>
+                        <MuralPopupComponent
+                            popupVisibility={this.state.popupVisibility}
+                            id={this.state.currentMuralId}
+                            showNext={this.showNext = this.showNext.bind(this)}
+                            showPrevious={this.showPrevious = this.showPrevious.bind(this)}
+                            toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
+                        />
                     </div>
                 </div>
-                <MuralPopupComponent />
             </React.Fragment>
         )
     }
