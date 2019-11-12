@@ -1,6 +1,7 @@
 @import "../../variables.scss";
 
 #muralPopupWindow {
+  display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -21,6 +22,7 @@
   border: 6px solid $yellowMain;
   border-radius: 350px;
 }
+
 .popup-img {
   background-size: contain;
   background-repeat: no-repeat;

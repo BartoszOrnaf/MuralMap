@@ -8,7 +8,7 @@ import MuralsData from '../../MuralsDataBase/MuralsDataBase.json';
 class MuralMapComponent extends React.Component {
 
     state = {
-        popupVisibility: "none",
+        popupVisibility: false,
         currentMuralId: 0,
     }
 
@@ -52,6 +52,7 @@ class MuralMapComponent extends React.Component {
             currentMuralId: id
         })
     }
+
     showNext() {
         if (this.state.currentMuralId < Object.keys(MuralsData).length - 1) {
             this.setState({
@@ -69,43 +70,45 @@ class MuralMapComponent extends React.Component {
     }
 
     toggleVisibility() {
-               
-        if (this.state.popupVisibility === "none") {
-            this.setState({
-                popupVisibility: "flex"
-            })
-        } else {
-            this.setState({
-                popupVisibility: "none"
-            })
-        }
+
+        this.setState(
+            function (state) {
+                return {
+                    popupVisibility: !state.popupVisibility
+                }
+            }
+        )
+
     }
 
     render() {
-
+        // Conditional rendering
         return (
             <React.Fragment>
                 <div id="bigger-container" >
                     <div id="container">
                         <div id="elem" draggable="true" style={{ left: '-680px', top: '-300px' }}>
-                            < MuralItemsComponent 
-                            setCurrentMuralId={this.setCurrentMuralId = this.setCurrentMuralId.bind(this)} 
-                            toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
+                            < MuralItemsComponent
+                                setCurrentMuralId={this.setCurrentMuralId = this.setCurrentMuralId.bind(this)}
+                                toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
                             />
                         </div>
-                        <MuralPopupComponent
-                            popupVisibility={this.state.popupVisibility}
-                            id={this.state.currentMuralId}
-                            showNext={this.showNext = this.showNext.bind(this)}
-                            showPrevious={this.showPrevious = this.showPrevious.bind(this)}
-                            toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
-                        />
+                        {
+                            this.state.popupVisibility && <MuralPopupComponent
+                                id={this.state.currentMuralId}
+                                showNext={this.showNext = this.showNext.bind(this)}
+                                showPrevious={this.showPrevious = this.showPrevious.bind(this)}
+                                toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
+                            />
+
+
+                        }
+
                     </div>
                 </div>
             </React.Fragment>
         )
     }
-
 };
 
 export default MuralMapComponent;

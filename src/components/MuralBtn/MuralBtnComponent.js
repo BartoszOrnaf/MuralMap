@@ -1,54 +1,45 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import './MuralBtnComponent.scss'
 
-class MuralBtnComponent extends React.Component {
-    state = {
-        id: this.props.id,
-        top: this.props.top,
-        left: this.props.left,
-        imgUrl: "/img/logoRed.png"
-    }
-    
-    overStyle() {
-        this.setState((state) => {
-            return {
-                top: parseInt(state.top) - 120,
-                left: parseInt(state.left) - 120,
-                imgUrl: this.props.imgUrl
-            }
-        }
-        )
-    }
+function MuralBtnComponent(props) {
 
-    outStyle() {
-        this.setState((state) => {
-            return {
-                top: parseInt(state.top) + 120,
-                left: parseInt(state.left) + 120,
-                imgUrl: "/img/logoRed.png"
-            }
-        }
-        )
+    const [top, setTop] = useState(props.top)
+    const [left, setLeft] = useState(props.left)
+    const [imgUrl, setImgUrl ] = useState("/img/logoRed.png")
+
+    function overStyle() {
+        setTop(parseInt(top) - 120);
+        setLeft(parseInt(left) - 120);
+        setImgUrl(props.imgUrl)
     }
-   
-    render() {
-        const btnStyle = {
-            left: this.state.left,
-            top: this.state.top,
-            backgroundImage: `url("${this.state.imgUrl}")`
-        }
+ 
+  function  outStyle() {
+        setTop(parseInt(top) + 120);
+        setLeft(parseInt(left) + 120);
+        setImgUrl("/img/logoRed.png")
         
-        return (
-            <button id={this.props.id}
-                className="mural-button"
-                onClick = {this.props.toggleVisibility}
-                onMouseOver={this.overStyle = this.overStyle.bind(this)}
-                onMouseOut={this.outStyle = this.outStyle.bind(this)}
-                style={btnStyle}>
-            </button>
-
-        )
     }
+
+ 
+    const btnStyle = {
+        left,
+        top,
+        backgroundImage: `url("${imgUrl}")`
+    }
+
+
+    return (
+        <button id={props.id}
+            className="mural-button"
+            onClick={props.toggleVisibility}
+            onMouseOver={overStyle}
+            onMouseOut={outStyle}
+            style={btnStyle}>
+        </button>
+
+    )
+
 
 }
 

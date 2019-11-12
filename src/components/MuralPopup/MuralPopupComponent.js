@@ -2,16 +2,17 @@ import React from 'react';
 import './MuralPopupComponent.scss';
 import MuralsData from '../../MuralsDataBase/MuralsDataBase.json';
 
+
 class MuralPopupComponent extends React.Component {
 
     render() {
         
         const popupImgStyle = {
-            backgroundImage: `url("${MuralsData[this.props.id].imgUrl}")`
+            backgroundImage: `url("${MuralsData[this.props.id].imgUrl}")`,
         }
 
         return (
-            <div id="muralPopupWindow" style = {{display: this.props.popupVisibility}}>
+            <div id="muralPopupWindow" >
                 <div id="muralPopupFrame">
                     <button className="popup-closing-button" onClick={this.props.toggleVisibility}>
                         X
