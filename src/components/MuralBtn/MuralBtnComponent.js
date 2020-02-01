@@ -28,14 +28,16 @@ function MuralBtnComponent(props) {
         backgroundImage: `url("${imgUrl}")`
     }
 
+  
 
     return (
-        <button id={props.id}
+        <button id={props.id}   
             className="mural-button"
-            onClick={props.toggleVisibility}
+            onClick={props.onClick}
             onMouseOver={overStyle}
             onMouseOut={outStyle}
             style={btnStyle}>
+
         </button>
 
     )

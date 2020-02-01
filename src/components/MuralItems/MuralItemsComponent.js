@@ -1,14 +1,19 @@
 import React from 'react';
-import './MuralItemsComponent.scss';
+import './MuralItemsComponent.scss'; 
 import MuralsData from '../../MuralsDataBase/MuralsDataBase.json';
 import MuralBtnComponent from '../MuralBtn/MuralBtnComponent'
 
 class MuralItemsComponent extends React.Component {
- 
+ onClickFactory(id) {
+     return function(){
+        this.props.setCurrentMuralId(id);
+        this.props.toggleVisibility();
+
+     }.bind(this);
+ }
     render() {
         const murals = MuralsData;
         return (
-            <React.Fragment>
                 <div id="all-murals" >
                     
                     {murals.map((mural, index) => <MuralBtnComponent key ={index}
@@ -16,12 +21,11 @@ class MuralItemsComponent extends React.Component {
                                                                      top={mural.top}
                                                                      left={mural.left}
                                                                      imgUrl={mural.imgUrl}
-                                                                     setCurrentMuralId = {this.props.setCurrentMuralId}
-                                                                     toggleVisibility = {this.props.toggleVisibility}
+                                                                     onClick={this.onClickFactory.call(this, index)}
+                                                                    
                                                                     />)}
                 </div>
 
-            </React.Fragment>
         )
     }
 }

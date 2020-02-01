@@ -48,6 +48,7 @@ class MuralMapComponent extends React.Component {
     }
 
     setCurrentMuralId(id) {
+        console.log(id)
         this.setState({
             currentMuralId: id
         })
@@ -84,13 +85,12 @@ class MuralMapComponent extends React.Component {
     render() {
         // Conditional rendering
         return (
-            <React.Fragment>
                 <div id="bigger-container" >
                     <div id="container">
                         <div id="elem" draggable="true" style={{ left: '-680px', top: '-300px' }}>
                             < MuralItemsComponent
-                                setCurrentMuralId={this.setCurrentMuralId = this.setCurrentMuralId.bind(this)}
-                                toggleVisibility={this.toggleVisibility = this.toggleVisibility.bind(this)}
+                                setCurrentMuralId={ this.setCurrentMuralId.bind(this)}
+                                toggleVisibility={ this.toggleVisibility.bind(this)}
                             />
                         </div>
                         {
@@ -106,7 +106,6 @@ class MuralMapComponent extends React.Component {
 
                     </div>
                 </div>
-            </React.Fragment>
         )
     }
 };
