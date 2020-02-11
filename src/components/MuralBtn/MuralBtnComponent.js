@@ -17,7 +17,7 @@ function MuralBtnComponent(props) {
   function  outStyle() {
         setTop(parseInt(top) + 120);
         setLeft(parseInt(left) + 120);
-        setImgUrl("/img/logoRed.png")
+        setImgUrl("./img/logoRed.png")
         
     }
 
