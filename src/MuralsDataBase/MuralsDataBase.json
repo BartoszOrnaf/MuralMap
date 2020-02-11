@@ -7,7 +7,7 @@
         "date": "2013",
         "left": "1230px",
         "top": "800px",
-        "imgUrl":"/img/IronHorse.jpg",
+        "imgUrl":"./img/IronHorse.jpg",
         "aboutUrl":"https://lodz.naszemiasto.pl/mural-przy-tuwima-zostal-ukonczony-zdjecia/ar/c13-2762030"
     },
     {
@@ -18,7 +18,7 @@
         "date": "2014",
         "left": "1250px",
         "top": "700px",
-        "imgUrl":"/img/Rubinstein.jpg",
+        "imgUrl":"./img/Rubinstein.jpg",
         "aboutUrl":"https://dzienniklodzki.pl/mural-z-arturem-rubinsteinem-juz-ukonczony-zdjeciafilm/ar/3577989"
     }, 
     {
@@ -29,7 +29,7 @@
         "date": "2018",
         "left": "1200px",
         "top": "570px",
-        "imgUrl":"/img/ObliczePiekna.jpg",
+        "imgUrl":"./img/ObliczePiekna.jpg",
         "aboutUrl":"https://www.archidiecezja.lodz.pl/2018/09/oblicze-piekna-maryjny-mural-na-scianie-lodzkiej-kamienicy/"
     },
     {
@@ -40,7 +40,7 @@
         "date": "2016",
         "left": "1250px",
         "top": "980px",
-        "imgUrl":"/img/EnjoyTheSilence.jpg",
+        "imgUrl":"./img/EnjoyTheSilence.jpg",
         "aboutUrl":"http://lodz.wyborcza.pl/lodz/5,35136,20643331.html"
     },
   
@@ -52,7 +52,7 @@
         "date": "2013",
         "left": "1020px",
         "top": "1400px",
-        "imgUrl":"/img/MadameChicken.jpg",
+        "imgUrl":"./img/MadameChicken.jpg",
         "aboutUrl":"http://rynekisztuka.pl/2014/01/16/etam-cru-czyli-street-art-w-polskim-wydaniu/"
     },
     {
@@ -63,7 +63,7 @@
         "date": "2017",
         "left": "2100px",
         "top": "1000px",
-        "imgUrl":"/img/Mokosh.jpg",
+        "imgUrl":"./img/Mokosh.jpg",
         "aboutUrl":"http://lodz.wyborcza.pl/lodz/56,35136,22384483,mokosz,,1.html"
     },
     {
@@ -74,7 +74,7 @@
         "date": "2012",
         "left": "1650px",
         "top": "900px",
-        "imgUrl":"/img/Traphouse.jpg",
+        "imgUrl":"./img/Traphouse.jpg",
         "aboutUrl":"https://lodz.naszemiasto.pl/nowy-mural-w-lodzi-w-czwartek-prezentacja-dziela-na/ar/c13-1488819"
     },
     {
@@ -85,7 +85,7 @@
         "date": "2012",
         "left": "1200px",
         "top": "1020px",
-        "imgUrl":"/img/OsGemeos.jpg",
+        "imgUrl":"./img/OsGemeos.jpg",
         "aboutUrl":"https://lodz.naszemiasto.pl/streetartowcy-maluja-lodz-mural-przy-roosevelta-odsloniety/ar/c13-2795902"
     },
     {
@@ -96,7 +96,7 @@
         "date": "2013",
         "left": "1100px",
         "top": "330px",
-        "imgUrl":"/img/LasiceKradnaJajka.jpg",
+        "imgUrl":"./img/LasiceKradnaJajka.jpg",
         "aboutUrl":"https://www.urbanforms.org/fundacja/artysci/roa/"
     },
     {
@@ -107,7 +107,7 @@
         "date": "2009",
         "left": "1035px",
         "top": "420px",
-        "imgUrl":"/img/Tyber.jpg",
+        "imgUrl":"./img/Tyber.jpg",
         "aboutUrl":"https://www.gregorgonsior.com/index.php/murals/zachodnia-52/"
     },
     {
@@ -118,7 +118,7 @@
         "date": "2011",
         "left": "950px",
         "top": "380px",
-        "imgUrl":"/img/MCity.jpg",
+        "imgUrl":"./img/MCity.jpg",
         "aboutUrl":"https://www.urbanforms.org/fundacja/artysci/m-city/"
     },
     {
@@ -129,7 +129,7 @@
         "date": "2013",
         "left": "810px",
         "top": "420px",
-        "imgUrl":"/img/Gentryfikacja.jpg",
+        "imgUrl":"./img/Gentryfikacja.jpg",
         "aboutUrl":"https://www.urbanforms.org/fundacja/artysci/tone/"
     },
     {
@@ -140,7 +140,7 @@
         "date": "2012",
         "left": "1550px",
         "top": "500px",
-        "imgUrl":"/img/Blejzyk.jpg",
+        "imgUrl":"./img/Blejzyk.jpg",
         "aboutUrl":"https://lodz.naszemiasto.pl/nowy-mural-na-uniwersyteckiej-praca-magisterska-przemyslawa/ar/c13-1421539"
     },
     {
@@ -151,7 +151,7 @@
         "date": "2012",
         "left": "780px",
         "top": "900px",
-        "imgUrl":"/img/HolyWarrior.jpg",
+        "imgUrl":"./img/HolyWarrior.jpg",
         "aboutUrl":"https://www.urbanforms.org/fundacja/artysci/inti/"
     }
 ]
