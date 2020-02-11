@@ -16,7 +16,7 @@ class MuralMapComponent extends React.Component {
 
         const element = document.getElementById('elem')
         const dragImg = new Image();
-        dragImg.src = "/img/handSmall.png";
+        dragImg.src = "./img/handSmall.png";
 
         this.startX = 0;
         this.startY = 0;
