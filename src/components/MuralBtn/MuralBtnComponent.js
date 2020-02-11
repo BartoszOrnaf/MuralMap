@@ -6,7 +6,7 @@ function MuralBtnComponent(props) {
 
     const [top, setTop] = useState(props.top)
     const [left, setLeft] = useState(props.left)
-    const [imgUrl, setImgUrl ] = useState("/img/logoRed.png")
+    const [imgUrl, setImgUrl ] = useState("./img/logoRed.png")
 
     function overStyle() {
         setTop(parseInt(top) - 120);
@@ -29,7 +29,6 @@ function MuralBtnComponent(props) {
     }
 
   
-
     return (
         <button id={props.id}   
             className="mural-button"
@@ -41,7 +40,6 @@ function MuralBtnComponent(props) {
         </button>
 
     )
-
 
 }
 
