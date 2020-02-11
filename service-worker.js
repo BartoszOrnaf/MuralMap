@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/MuralMap/precache-manifest.ea22d8cd3a7d33bd1c45363552e6cdbe.js"
+  "/MuralMap/precache-manifest.feea7917b9202fe1f3656a39c8bd07a6.js"
 );
 
 self.addEventListener('message', (event) => {

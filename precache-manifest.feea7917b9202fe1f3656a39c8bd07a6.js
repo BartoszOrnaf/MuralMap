@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4220770e048c2b835adb974f3d319ae8",
+    "revision": "1531b19e9d68a947be079a768a9ef298",
     "url": "/MuralMap/index.html"
   },
   {
-    "revision": "60628036b72ec3f6d8ca",
+    "revision": "95930525c3a517b7d18b",
     "url": "/MuralMap/static/css/main.e95682f5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MuralMap/static/js/2.bfc8d4ce.chunk.js"
   },
   {
-    "revision": "60628036b72ec3f6d8ca",
-    "url": "/MuralMap/static/js/main.5298cdcd.chunk.js"
+    "revision": "95930525c3a517b7d18b",
+    "url": "/MuralMap/static/js/main.6466bab6.chunk.js"
   },
   {
     "revision": "c41753ef549bb881295b",
